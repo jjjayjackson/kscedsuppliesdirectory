@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KSC ED Supplies Directory Ver. 2</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="header-note-wrapper">
+      <h1>KSC ED Supplies Directory Ver. 2</h1>
+      <p class="note">
+        <u>Note</u>: So far only shelf K in little blue has been completely
+        added into this directory. Many more shelves will be added in the coming
+        weeks. This message will be gone when the entirety of the department
+        supplies have been added. Last updated 9.26.25.
+      </p>
+    </div>
+
+    <!-- Horizontal bar with room selection buttons -->
+    <div class="room-buttons">
+      <button type="button" class="room-button" data-room="big_blue">
+        Big Blue
+      </button>
+      <button type="button" class="room-button" data-room="central">
+        Central
+      </button>
+      <button type="button" class="room-button" data-room="little_blue">
+        Little Blue
+      </button>
+      <button type="button" class="room-button" data-room="ob_gyne">
+        OB/Gyne
+      </button>
+      <button type="button" class="room-button" data-room="rc_94_95">
+        RC 94/95
+      </button>
+      <button type="button" class="room-button" data-room="rc_lac">
+        RC Lac
+      </button>
+    </div>
+
+    <!-- Wrap form and results in a single container -->
+    <div class="search-wrapper">
+      <div class="search-container">
+        <form id="searchForm">
+          <input
+            type="text"
+            id="searchInput"
+            class="search-box"
+            placeholder="What are you looking for?"
+          />
+          <button type="submit" class="search-button">Let's find it!</button>
+        </form>
+      </div>
+      <div id="results"></div>
+    </div>
+
+    <!-- Navigation links below the search bar -->
+    <div class="nav-links">
+      <p class="additional">
+        <u><strong>Additional Resources</strong></u>
+      </p>
+      <a href="history.html">History and Updates</a>
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSe1Fp17neDJjUbp2aYxwPVRdNohFPErybgw8a4Fdma0H8a5iw/viewform?usp=dialog"
+        >Something not where it should be?</a
+      >
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdGOdAAqSw_9l5_HM-DAOTK8n26NWZxudIYGjITMFw34-UZWA/viewform?usp=header"
+        >Should something be renamed?</a
+      >
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSd-s_s4SUzo0rnak-m2eRdL3Wo41ecaOS-7VXUsxsGmuoqlfg/viewform?usp=header"
+        >Something not to your liking? Provide feedback here!</a
+      >
+      <a
+        href="https://docs.google.com/spreadsheets/d/11MTbi2elk0j7BXYDhVX5SZoXruGh60paBNUtO4GhBLs/edit?usp=sharing"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Here's the original supplies directory released in Dec 2024.</a
+      >
+      <a href="upgrades.html">Planned upgrades to this site</a>
+    </div>
+
+    <div class="credit">
+      <p>This directory designed and developed by yours truly, Jay EDT II.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+  </body>
+</html>
